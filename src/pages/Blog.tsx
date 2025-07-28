@@ -17,8 +17,8 @@ const Blog = () => {
   return (
     <PageLayout>
       <SEO 
-        title="WRLDS - News and insights about smart textile technology" 
-        description="Stay updated with the latest news and insights about sensor-integrated textiles and smart technology from WRLDS Technologies."
+        title="WRLDS - Actualités et analyses sur la technologie textile intelligente" 
+        description="Restez informé des dernières actualités et analyses sur les textiles intégrés aux capteurs et la technologie intelligente de WRLDS Technologies."
         imageUrl={featuredPost?.imageUrl || "/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png"}
         keywords={['smart textiles', 'textile technology', 'industry news', 'sensor innovation', 'wearable tech', 'smart fabrics']}
         type="website"
@@ -27,9 +27,9 @@ const Blog = () => {
       <div className="w-full pt-24 pb-12 bg-gradient-to-b from-black to-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">WRLDS News &amp; Insights</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">WRLDS Actualités &amp; Analyses</h1>
             <p className="text-xl text-gray-300 mb-6">
-              The latest trends and news in sensor-integrated textiles and smart technology
+              Les dernières tendances et actualités sur les textiles intégrés aux capteurs et la technologie intelligente
             </p>
           </div>
         </div>
@@ -56,12 +56,12 @@ const Blog = () => {
                     </div>
                   </div>
                   <CardContent className="p-8">
-                    <p className="text-gray-500 text-sm mb-2">Published: {featuredPost.date}</p>
+                    <p className="text-gray-500 text-sm mb-2">Publié le : {featuredPost.date}</p>
                     <p className="text-gray-700 mb-6">
                       {featuredPost.excerpt}
                     </p>
                     <Button variant="outline" className="group">
-                      Read more 
+                      Lire la suite 
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Button>
                   </CardContent>
@@ -87,12 +87,12 @@ const Blog = () => {
           {blogPosts.length < 4 && Array.from({ length: Math.max(0, 4 - blogPosts.length) }).map((_, index) => (
             <BlogPostCard 
               key={`placeholder-${index}`}
-              title="Upcoming article"
-              excerpt="Stay tuned for more exciting articles about smart textiles and sensor technology."
+              title="Article à venir"
+              excerpt="Restez à l'écoute pour plus d'articles passionnants sur les textiles intelligents et la technologie des capteurs."
               imageUrl={index % 2 === 0 ? "/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png" : "/lovable-uploads/700e27d7-0513-4bfa-8ac4-f7fd6087594c.png"}
-              date="Coming soon"
+              date="Bientôt disponible"
               slug="#"
-              category="Upcoming"
+              category="À venir"
             />
           ))}
         </div>

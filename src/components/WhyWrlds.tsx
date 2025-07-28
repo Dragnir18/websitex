@@ -86,10 +86,10 @@ const WhyWrlds = () => {
         margin: "-100px"
       }} variants={containerVariants}>
           <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
-            Why WRLDS?
+            Pourquoi WRLDS ?
           </motion.h2>
           <motion.p variants={itemVariants} className="text-gray-600 text-lg max-w-3xl mx-auto">
-            In an industry where complexity leads to failure, we bring simplicity and expertise to ensure your success
+            Dans une industrie où la complexité mène à l'échec, nous apportons simplicité et expertise pour assurer votre succès
           </motion.p>
         </motion.div>
         
@@ -104,7 +104,7 @@ const WhyWrlds = () => {
             <h3 className="text-gray-900 text-2xl lg:text-3xl font-bold mb-3">
               <AnimatedCounter end={3.8} decimals={1} suffix=" Billion" /> USD
             </h3>
-            <p className="text-gray-700">Market estimated to reach this value by 2030, with massive growth potential for smart textile solutions</p>
+            <p className="text-gray-700">Marché estimé atteindre cette valeur d'ici 2030, avec un potentiel de croissance massif pour les solutions textiles intelligentes</p>
           </motion.div>
           
           <motion.div variants={itemVariants} className="bg-gray-100 p-6 rounded-xl border border-gray-200 text-center hover:bg-gray-200 transition-all">
@@ -115,7 +115,7 @@ const WhyWrlds = () => {
               <AnimatedCounter end={60} suffix="%" /> 
             </h3>
             <p className="text-gray-700">
-              of IoT projects stall at the proof-of-concept stage due to fragmented expertise and poor coordination
+              des projets IoT s'arrêtent au stade de preuve de concept en raison d'une expertise fragmentée et d'une mauvaise coordination
             </p>
           </motion.div>
           
@@ -127,7 +127,7 @@ const WhyWrlds = () => {
               <AnimatedCounter end={80} suffix="%" />
             </h3>
             <p className="text-gray-700">
-              Increase in time-to-market for IoT products over the past four years, creating costly delays
+              Augmentation du temps de commercialisation pour les produits IoT au cours des quatre dernières années, créant des retards coûteux
             </p>
           </motion.div>
         </motion.div>
@@ -138,10 +138,10 @@ const WhyWrlds = () => {
         }} variants={containerVariants}>
           <motion.div variants={itemVariants} className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              What WRLDS Does for You
+              Ce que WRLDS fait pour vous
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              We transform your ideas into market-ready solutions with tangible benefits for your business
+              Nous transformons vos idées en solutions prêtes pour le marché avec des avantages tangibles pour votre entreprise
             </p>
           </motion.div>
           
@@ -152,8 +152,8 @@ const WhyWrlds = () => {
                   <BarChart className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">New Revenue Products</h4>
-                  <p className="text-gray-700">Create high-margin, sensor-enabled products for new revenue streams.</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Nouveaux Produits de Revenus</h4>
+                  <p className="text-gray-700">Créez des produits à capteurs haute marge pour de nouveaux flux de revenus.</p>
                 </div>
               </div>
             </motion.div>
@@ -164,8 +164,8 @@ const WhyWrlds = () => {
                   <Sparkles className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Innovation That Attracts</h4>
-                  <p className="text-gray-700">Break through to dream clients with tech that makes you stand out.</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Innovation qui Attire</h4>
+                  <p className="text-gray-700">Percez auprès de clients de rêve avec une technologie qui vous distingue.</p>
                 </div>
               </div>
             </motion.div>
@@ -176,8 +176,8 @@ const WhyWrlds = () => {
                   <Zap className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Comfort-Zone Development</h4>
-                  <p className="text-gray-700">We develop frontier tech while you stay in your comfort zone.</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Développement Zone de Confort</h4>
+                  <p className="text-gray-700">Nous développons la technologie de pointe pendant que vous restez dans votre zone de confort.</p>
                 </div>
               </div>
             </motion.div>
@@ -188,8 +188,8 @@ const WhyWrlds = () => {
                   <Rocket className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Brand-Building Leaps</h4>
-                  <p className="text-gray-700">We enable hardware/software leaps that define your brand's future.</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Bonds de Construction de Marque</h4>
+                  <p className="text-gray-700">Nous permettons des bonds matériels/logiciels qui définissent l'avenir de votre marque.</p>
                 </div>
               </div>
             </motion.div>
@@ -201,7 +201,7 @@ const WhyWrlds = () => {
               onClick={() => window.scrollTo(0, 0)}
               className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-all group"
             >
-              Learn more about our structured development process
+              En savoir plus sur notre processus de développement structuré
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>

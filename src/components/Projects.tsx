@@ -130,19 +130,19 @@ const Projects = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className={`text-center mb-10 max-w-3xl mx-auto transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-block mb-2 px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
-            Customer Cases
+            Cas Clients
           </div>
           <h2 className="text-3xl font-bold mb-3">
-            From Textile to Intelligence
+            Du Textile à l'Intelligence
           </h2>
           <p className="text-gray-600">
-            Explore how our textile sensor technology is revolutionizing multiple industries with intelligent fabric solutions tailored to specific needs.
+            Découvrez comment notre technologie de capteurs textiles révolutionne plusieurs industries avec des solutions textiles intelligentes adaptées aux besoins spécifiques.
           </p>
           {isMobile && (
             <div className="flex items-center justify-center mt-4 animate-pulse-slow">
               <div className="flex items-center text-blue-500">
                 <ChevronLeft size={16} />
-                <p className="text-sm mx-1">Swipe to navigate</p>
+                <p className="text-sm mx-1">Balayez pour naviguer</p>
                 <ChevronRight size={16} />
               </div>
             </div>
@@ -214,7 +214,7 @@ const Projects = () => {
                           }
                         }}
                       >
-                        <span className="relative z-10">Learn more</span>
+                        <span className="relative z-10">En savoir plus</span>
                         <ArrowRight className="ml-2 w-4 h-4 relative z-10 transition-transform group-hover:translate-x-1" />
                         <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-500 transition-all duration-300 group-hover:w-full"></span>
                       </Link>

@@ -16,12 +16,12 @@ const BlogPostDetail = () => {
     return (
       <PageLayout>
         <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
-          <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
+          <h1 className="text-4xl font-bold mb-4">Article non trouvé</h1>
+          <p className="text-gray-600 mb-8">L'article de blog que vous cherchez n'existe pas.</p>
           <Link to="/blog">
             <Button variant="outline">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Blog
+              Retour au blog
             </Button>
           </Link>
         </div>
@@ -60,7 +60,7 @@ const BlogPostDetail = () => {
               <div className="w-full max-w-4xl mx-auto text-left md:text-center">
                 <Link to="/blog" className="inline-flex items-center text-gray-300 hover:text-white mb-4 transition-colors text-sm">
                   <ArrowLeft className="mr-2 h-3 w-3" />
-                  Back to Blog
+                  Retour au blog
                 </Link>
                 
                 {/* Mobile-optimized title */}
