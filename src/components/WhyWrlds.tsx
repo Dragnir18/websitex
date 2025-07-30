@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Shield, Server, Lock, Cpu, Database, ShieldCheck, AlertTriangle, TrendingUp, Rocket, Zap, Sparkles, ArrowRight, Award, Target, ChartBar } from "lucide-react";
+import { Layers, BarChart, AlertTriangle, Clock4, Rocket, Zap, Sparkles, ArrowRight, Award, Target, Shield, ChartBar } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Link } from "react-router-dom";
 
@@ -98,36 +98,36 @@ const WhyWrlds = () => {
         margin: "-100px"
       }} variants={containerVariants}>
           <motion.div variants={itemVariants} className="bg-gray-100 p-6 rounded-xl border border-gray-200 text-center hover:bg-gray-200 transition-all">
-            <div className="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-4">
-              <Shield className="w-8 h-8 text-red-600" />
+            <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mx-auto mb-4">
+              <BarChart className="w-8 h-8 text-gray-700" />
             </div>
             <h3 className="text-gray-900 text-2xl lg:text-3xl font-bold mb-3">
-              <AnimatedCounter end={4.88} decimals={2} prefix="$" suffix=" Millions" />
+              <AnimatedCounter end={3.8} decimals={1} suffix=" Billion" /> USD
             </h3>
-            <p className="text-gray-700">Coût moyen d'une violation de données en 2024, montrant l'importance critique de la cybersécurité</p>
+            <p className="text-gray-700">Marché estimé atteindre cette valeur d'ici 2030, avec un potentiel de croissance massif pour les solutions textiles intelligentes</p>
           </motion.div>
           
           <motion.div variants={itemVariants} className="bg-gray-100 p-6 rounded-xl border border-gray-200 text-center hover:bg-gray-200 transition-all">
-            <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mx-auto mb-4">
-              <AlertTriangle className="w-8 h-8 text-orange-600" />
+            <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mx-auto mb-4">
+              <AlertTriangle className="w-8 h-8 text-gray-700" />
             </div>
             <h3 className="text-gray-900 text-2xl lg:text-3xl font-bold mb-3">
-              <AnimatedCounter end={72} suffix="%" /> 
+              <AnimatedCounter end={60} suffix="%" /> 
             </h3>
             <p className="text-gray-700">
-              des entreprises ont subi au moins une cyberattaque en 2023, nécessitant des infrastructures sécurisées
+              des projets IoT s'arrêtent au stade de preuve de concept en raison d'une expertise fragmentée et d'une mauvaise coordination
             </p>
           </motion.div>
           
           <motion.div variants={itemVariants} className="bg-gray-100 p-6 rounded-xl border border-gray-200 text-center hover:bg-gray-200 transition-all">
-            <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
-              <TrendingUp className="w-8 h-8 text-blue-600" />
+            <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mx-auto mb-4">
+              <Clock4 className="w-8 h-8 text-gray-700" />
             </div>
             <h3 className="text-gray-900 text-2xl lg:text-3xl font-bold mb-3">
-              <AnimatedCounter end={15} suffix="%" />
+              <AnimatedCounter end={80} suffix="%" />
             </h3>
             <p className="text-gray-700">
-              Croissance annuelle du marché des serveurs et infrastructures sécurisées, un secteur en pleine expansion
+              Augmentation du temps de commercialisation pour les produits IoT au cours des quatre dernières années, créant des retards coûteux
             </p>
           </motion.div>
         </motion.div>
@@ -146,50 +146,50 @@ const WhyWrlds = () => {
           </motion.div>
           
           <motion.div variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div variants={itemVariants} className="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-xl border border-red-200 hover:shadow-lg transition-all">
+            <motion.div variants={itemVariants} className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all">
               <div className="flex items-start">
-                <div className="bg-red-200 rounded-full p-3 mr-4">
-                  <ShieldCheck className="w-6 h-6 text-red-700" />
+                <div className="bg-gray-200 rounded-full p-3 mr-4">
+                  <BarChart className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Sécurité Renforcée</h4>
-                  <p className="text-gray-700">Protégez vos infrastructures avec des solutions de cybersécurité avancées et des matériels sécurisés.</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Nouveaux Produits de Revenus</h4>
+                  <p className="text-gray-700">Créez des produits à capteurs haute marge pour de nouveaux flux de revenus.</p>
                 </div>
               </div>
             </motion.div>
             
-            <motion.div variants={itemVariants} className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200 hover:shadow-lg transition-all">
+            <motion.div variants={itemVariants} className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all">
               <div className="flex items-start">
-                <div className="bg-blue-200 rounded-full p-3 mr-4">
-                  <Server className="w-6 h-6 text-blue-700" />
+                <div className="bg-gray-200 rounded-full p-3 mr-4">
+                  <Sparkles className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Infrastructure Haute Performance</h4>
-                  <p className="text-gray-700">Déployez des serveurs et équipements réseau optimisés pour vos besoins critiques.</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Innovation qui Attire</h4>
+                  <p className="text-gray-700">Percez auprès de clients de rêve avec une technologie qui vous distingue.</p>
                 </div>
               </div>
             </motion.div>
             
-            <motion.div variants={itemVariants} className="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-xl border border-green-200 hover:shadow-lg transition-all">
+            <motion.div variants={itemVariants} className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all">
               <div className="flex items-start">
-                <div className="bg-green-200 rounded-full p-3 mr-4">
-                  <Cpu className="w-6 h-6 text-green-700" />
+                <div className="bg-gray-200 rounded-full p-3 mr-4">
+                  <Zap className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Matériel de Pointe</h4>
-                  <p className="text-gray-700">Intégrez les dernières technologies processeur et composants pour une performance maximale.</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Développement Zone de Confort</h4>
+                  <p className="text-gray-700">Nous développons la technologie de pointe pendant que vous restez dans votre zone de confort.</p>
                 </div>
               </div>
             </motion.div>
             
-            <motion.div variants={itemVariants} className="bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200 hover:shadow-lg transition-all">
+            <motion.div variants={itemVariants} className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all">
               <div className="flex items-start">
-                <div className="bg-purple-200 rounded-full p-3 mr-4">
-                  <Database className="w-6 h-6 text-purple-700" />
+                <div className="bg-gray-200 rounded-full p-3 mr-4">
+                  <Rocket className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Gestion de Données Sécurisée</h4>
-                  <p className="text-gray-700">Stockez et gérez vos données sensibles avec des solutions de chiffrement et de sauvegarde avancées.</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Bonds de Construction de Marque</h4>
+                  <p className="text-gray-700">Nous permettons des bonds matériels/logiciels qui définissent l'avenir de votre marque.</p>
                 </div>
               </div>
             </motion.div>
