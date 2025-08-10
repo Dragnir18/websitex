@@ -1,12 +1,11 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Menu, X, ChevronDown, LogIn, ShoppingCart, Search } from "lucide-react";
+import { Menu, X, ChevronDown, LogIn, ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { toast } from '@/components/ui/use-toast';
-import { Input } from "@/components/ui/input";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,63 +45,15 @@ const Navbar = () => {
       y: 0
     }}>
       <div className="w-full px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="grid grid-cols-3 items-center h-16">
+        <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <img src="/lovable-uploads/7d120ee6-3614-4b75-9c35-716d54490d67.png" alt="WRLDS Technologies Logo" className={cn("h-8 w-auto", isScrolled ? "" : "brightness-0 invert")} />
             </Link>
           </div>
-          {/* Center Search + Icons */}
-          <div className="hidden md:flex items-center justify-center gap-3 justify-self-center">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                const form = e.currentTarget as HTMLFormElement;
-                const input = form.querySelector('input[name="q"]') as HTMLInputElement | null;
-                const value = input?.value?.trim();
-                if (value) {
-                  toast({ title: "Recherche", description: `Vous avez recherché: "${value}"` });
-                } else {
-                  toast({ title: "Recherche", description: "Entrez un terme de recherche" });
-                }
-              }}
-              className="flex items-center gap-2"
-              role="search"
-              aria-label="Recherche sur le site"
-            >
-              <Input
-                name="q"
-                placeholder="Rechercher produits, services…"
-                className={cn("w-72")}
-              />
-              <button
-                type="submit"
-                aria-label="Rechercher"
-                className={cn("p-2 rounded-md transition-colors", isScrolled ? "text-gray-700 hover:bg-gray-100" : "text-gray-100 hover:bg-gray-800")}
-              >
-                <Search className="h-5 w-5" />
-              </button>
-            </form>
-            <div className="flex items-center gap-2">
-              <button
-                aria-label="Connexion"
-                onClick={() => toast({ title: "Connexion", description: "Fonctionnalité à venir" })}
-                className={cn("p-2 rounded-md transition-colors", isScrolled ? "text-gray-700 hover:bg-gray-100" : "text-gray-100 hover:bg-gray-800")}
-              >
-                <LogIn className="h-5 w-5" />
-              </button>
-              <button
-                aria-label="Panier"
-                onClick={() => toast({ title: "Panier", description: "E-commerce à venir" })}
-                className={cn("p-2 rounded-md transition-colors", isScrolled ? "text-gray-700 hover:bg-gray-100" : "text-gray-100 hover:bg-gray-800")}
-              >
-                <ShoppingCart className="h-5 w-5" />
-              </button>
-            </div>
-          </div>
-
+          
           {/* Desktop Navigation */}
-          <div className="hidden md:block justify-self-end col-start-3">
+          <div className="hidden md:block">
             <NavigationMenu className={cn(isScrolled ? "" : "text-white")}>
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -207,12 +158,30 @@ const Navbar = () => {
                      Nous contacter
                   </button>
                 </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <div className="flex items-center gap-2 pl-2">
+                    <button
+                      aria-label="Connexion"
+                      onClick={() => toast({ title: "Connexion", description: "Fonctionnalité à venir" })}
+                      className={cn("p-2 rounded-md transition-colors", isScrolled ? "text-gray-700 hover:bg-gray-100" : "text-gray-100 hover:bg-gray-800")}
+                    >
+                      <LogIn className="h-5 w-5" />
+                    </button>
+                    <button
+                      aria-label="Panier"
+                      onClick={() => toast({ title: "Panier", description: "E-commerce à venir" })}
+                      className={cn("p-2 rounded-md transition-colors", isScrolled ? "text-gray-700 hover:bg-gray-100" : "text-gray-100 hover:bg-gray-800")}
+                    >
+                      <ShoppingCart className="h-5 w-5" />
+                    </button>
+                  </div>
+                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </div>
           
           {/* Mobile menu button */}
-          <div className="md:hidden justify-self-end col-start-3">
+          <div className="md:hidden">
             <button onClick={toggleMenu} className={cn("focus:outline-none", isScrolled ? "text-gray-700" : "text-white")}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
