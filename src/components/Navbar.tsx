@@ -1,11 +1,11 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, LogIn, ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
-
+import { toast } from '@/components/ui/use-toast';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -158,6 +158,24 @@ const Navbar = () => {
                      Nous contacter
                   </button>
                 </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <div className="flex items-center gap-2 pl-2">
+                    <button
+                      aria-label="Connexion"
+                      onClick={() => toast({ title: "Connexion", description: "Fonctionnalité à venir" })}
+                      className={cn("p-2 rounded-md transition-colors", isScrolled ? "text-gray-700 hover:bg-gray-100" : "text-gray-100 hover:bg-gray-800")}
+                    >
+                      <LogIn className="h-5 w-5" />
+                    </button>
+                    <button
+                      aria-label="Panier"
+                      onClick={() => toast({ title: "Panier", description: "E-commerce à venir" })}
+                      className={cn("p-2 rounded-md transition-colors", isScrolled ? "text-gray-700 hover:bg-gray-100" : "text-gray-100 hover:bg-gray-800")}
+                    >
+                      <ShoppingCart className="h-5 w-5" />
+                    </button>
+                  </div>
+                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </div>
@@ -218,8 +236,14 @@ const Navbar = () => {
             Carrières
           </Link>
           
-          <button onClick={() => scrollToSection('contact')} className={cn("block w-full text-left px-3 py-1.5 rounded-md text-sm", isScrolled ? "text-gray-700 bg-gray-200 hover:bg-gray-300" : "text-white bg-gray-700 hover:bg-gray-600")}>
+          <button onClick={() => scrollToSection('contact')} className={cn("block w-full text-left px-3 py-1.5 rounded-md text-sm", isScrolled ? "text-gray-700 bg-gray-200 hover:bg-gray-300" : "text-white bg-gray-700 hover:bg-gray-600")}> 
             Nous contacter
+          </button>
+          <button aria-label="Connexion" onClick={() => toast({ title: "Connexion", description: "Fonctionnalité à venir" })} className={cn("mt-2 flex items-center gap-2 w-full px-3 py-1.5 rounded-md text-sm", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")}>
+            <LogIn className="h-5 w-5" /> Connexion
+          </button>
+          <button aria-label="Panier" onClick={() => toast({ title: "Panier", description: "E-commerce à venir" })} className={cn("mt-1 flex items-center gap-2 w-full px-3 py-1.5 rounded-md text-sm", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")}>
+            <ShoppingCart className="h-5 w-5" /> Panier
           </button>
         </div>
       </div>
